@@ -11,7 +11,7 @@
     --space-bewteen-logo-and-header: 2px;
     --size-social-logo:30px;
     --size-hover-social-logo:5px;
-    --footer-height:50px;
+    --footer-height:100%;
 
     --color-border:#1a1818;
     --type-of-border:solid;
@@ -30,7 +30,7 @@
 body{
     font-family: var(--font-family);
     line-height: 1.2;
-
+    background-color: aliceblue;
 }
 
 /* header pattern */
@@ -64,9 +64,10 @@ header{
     transition: 0.2s;
 }
 
+
 /* first nav barre (only for less than 767px) */
 
-.menu-phone{
+.phone-menu{
     position: relative;
     display: var(--flex-box);
     justify-content: space-between;
@@ -134,8 +135,8 @@ li {
 }
 
 .menu-contener{
+    display: flex;
     width: 120px;
-    display: var(--flex-box);
     flex-direction: column;
     position: absolute;
     background-color:var(--menu-contener-secondary-bgc);
@@ -144,8 +145,6 @@ li {
     border: 2px solid var(--color-border);
     box-sizing: border-box;
     box-shadow: 1px 7px 10px 2px rgba(0,0,0,0.3);
-    z-index:0;
-    display: none;
 }
 
 .menu-contener div{
@@ -157,6 +156,11 @@ li {
 }
 .contact,.video,.picture{
     padding: var(--padding-size);
+}
+
+/* hiden desktop menu */
+.desktop-menu{
+    display: none;
 }
 
 /* my content  */
@@ -191,7 +195,6 @@ h2{
 }
 
 p{
-    padding: 0.9rem;
 }
 
 #main-contener p{
@@ -218,7 +221,7 @@ section img{
 footer{
     margin-top: 40px;
     display: var(--flex-box);
-    flex-direction: row;
+    flex-direction: column;
     height: var( --footer-height);
     background-color:var(--footer-color);
     box-shadow: inset 0px 6px 7px 0px rgba(0,0,0,0.2);
@@ -228,13 +231,14 @@ footer{
 
 footer p{
     display: var(--flex-box);
+    justify-content: center;
     align-items: center;
 }
 
 .footer-logo{
    width: var(--size-box);
    display: var(--flex-box);
-   justify-content: flex-end;
+   justify-content: space-around;
    align-items: center;
 }
 
@@ -258,4 +262,101 @@ footer li{
     width:var(--size-social-logo);    
     height:var(--size-social-logo);
     transition: 0.3s;
+}
+
+@media (min-width:768px){
+    body{
+        margin: auto;
+        min-width: 1000px;
+        max-width: 80%;
+    }
+    header{
+        background-color: aliceblue;
+        box-shadow: none;
+        border: none;
+        justify-content: space-evenly;
+        padding: 2rem;
+    }
+    .logo{
+        margin: 0;
+        border: 1px solid;
+        height: 120px;
+        max-height: 120px;
+        width: 120px;
+        
+    }
+    .logo img{
+        align-items: center;
+        height:100px;
+        width: 100px;
+    }
+    .logo img:hover{
+        width: 120px;
+        height: 120px;
+    }
+    .phone-menu{
+        display: none;
+    }
+    .desktop-menu{
+        display:block;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border: 1px solid;
+    }
+    .desktop-menu-contener{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .btn-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .btn-content img{
+        width: 30px;
+    }
+
+
+    /* footer p{
+        display: var(--flex-box);
+        align-items: center;
+    }
+    
+    .footer-logo{
+       width: var(--size-box);
+       display: var(--flex-box);
+       justify-content: flex-end;
+       align-items: center;
+    }
+    
+    footer li{
+        width: var(--size-social-logo);
+        height: var(--size-social-logo);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo-social img{
+        width: calc(var(--size-social-logo) - var(--size-hover-social-logo));
+        height: calc(var(--size-social-logo)- var(--size-hover-social-logo));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo-social img:hover{
+        width:var(--size-social-logo);    
+        height:var(--size-social-logo);
+        transition: 0.3s;
+    } */
+
+*{
+    border: 1px solid;
+}
+
 }

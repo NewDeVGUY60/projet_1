@@ -1,9 +1,8 @@
 const btn = document.querySelector('.btn');
+const active = document.querySelector('.active');
 const menu = document.querySelector('.menu-contener');
 btn.addEventListener('click', (e) => {
-
-    // menu.classList.toggle('active');
-    menu.style.right = "-200px";
+    menu.classList.toggle('active');
 });
 
 

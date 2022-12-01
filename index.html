@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,35 +13,40 @@
     <script src="https://kit.fontawesome.com/4590f34f86.js" crossorigin="anonymous"></script>
     <title>My hobbies</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
-        <img src="assets/images/Logo_Nyx_CHAOS-removebg-preview.png" alt="logo">
+            <img src="assets/images/Logo_Nyx_CHAOS-removebg-preview.png" alt="logo">
+        </div>
+        <div>
+            <input type="checkbox" id="dark-mode" name="dark-mode" checked>
+            <label class="sun-moon" for="dark-mode"></label>
         </div>
         <nav class="phone-menu">
             <div class="menu">
                 <button class="btn">
-                    <div>
+                    <div class="barre-btn">
                         <div class="barre"></div>
                         <div class="barre"></div>
                         <div class="barre"></div>
                     </div>
                 </button>
-                <div id="font-menu" >Menu</div>
+                <div id="font-menu">Menu</div>
             </div>
-            <div class="menu-contener">
-                <div>Contact:</div>
-               <ul class="contact">
+            <div class="menu-contener ">
+                <div class="menu-title">Contact:</div>
+                <ul class="contact">
                     <li><a href="#">e-mail</a></li>
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">facebook</a></li>
                 </ul>
-                <div>Video:</div>
-                <ul class="video">
+                <div class="menu-title">Video:</div>
+                <ul class="video ">
                     <li><a href="#">Youtube</a></li>
                     <li><a href="#">twitch</a></li>
                 </ul>
-                <div>Photo:</div>
+                <div class="menu-title" >Photo:</div>
                 <ul class="picture">
                     <li><a href="#">instagram</a></li>
                     <li><a href="#">facebook</a></li>
@@ -48,13 +54,13 @@
             </div>
         </nav>
         <nav class="desktop-menu">
-            <div class="desktop-menu-contener">
-                <p class="acceuil">
-                    Acceuil
-                </p> 
+            <div class="desktop-menu-contener light-mode">
+                <p class="accueil">
+                    Accueil
+                </p>
                 <div>
                     <button class="btn-contact">
-                        <div class="btn-p" >
+                        <div class="btn-p">
                             Contact
                         </div>
                         <div>
@@ -83,7 +89,7 @@
                 </div>
                 <div>
                     <button class="btn-video">
-                        <div class="btn-p" >
+                        <div class="btn-p">
                             Video
                         </div>
                         <div>
@@ -102,18 +108,21 @@
         <h1>Lorem.</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipisici</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem dignissimos eaque ipsam ullam aliquid dicta quae, illum quos laborum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem dignissimos eaque ipsam ullam
+            aliquid dicta quae, illum quos laborum!
         </p>
     </div>
     <main>
         <section class="section-contener">
-            <div class="contener" >
+            <div class="contener">
                 <div class="contener-img">
                     <img src="assets/images/One_Piece.jpg" alt="picture of one piece book">
                 </div>
                 <div class="presentation-sujet">
                     <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe nostrum, veritatis magni aliquid, dolor reprehenderit atque, temporibus repellat expedita libero dignissimos similique! Minima atque dolores at, quidem provident fuga!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe nostrum, veritatis magni
+                        aliquid, dolor reprehenderit atque, temporibus repellat expedita libero dignissimos similique!
+                        Minima atque dolores at, quidem provident fuga!</p>
                 </div>
             </div>
             <div class="contener">
@@ -122,23 +131,29 @@
                 </div>
                 <div class="presentation-sujet">
                     <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos aliquid provident doloremque incidunt debitis autem aliquam, eligendi, aspernatur, dolorem corporis quas ipsum. Debitis voluptates voluptatibus dolore soluta iusto et ratione?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos aliquid provident doloremque
+                        incidunt debitis autem aliquam, eligendi, aspernatur, dolorem corporis quas ipsum. Debitis
+                        voluptates voluptatibus dolore soluta iusto et ratione?</p>
                 </div>
             </div>
             <div class="contener">
                 <div class="contener-img">
-                    <img src="assets/images/outer-space-background.jpg" alt="science press"> 
+                    <img src="assets/images/outer-space-background.jpg" alt="science press">
                 </div>
                 <div class="presentation-sujet">
                     <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vitae dolores nam, sapiente dignissimos repudiandae ipsam voluptates delectus expedita laudantium hic reprehenderit accusantium saepe excepturi inventore in, perferendis ab placeat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vitae dolores nam, sapiente
+                        dignissimos repudiandae ipsam voluptates delectus expedita laudantium hic reprehenderit
+                        accusantium saepe excepturi inventore in, perferendis ab placeat.</p>
                 </div>
             </div>
         </section>
         <aside>
             <div class="activity">
                 <h3>Mes activités annexes</h3>
-                    <p class="aside-p">Vous trouverez <a href="http://" target="_blank" rel="noopener noreferrer"><span>ici</span></a> tout mes bons plans pour les mangas, jeux etc...</p>
+                <p class="aside-p">Vous trouverez <a href="http://" target="_blank"
+                        rel="noopener noreferrer"><span>ici</span></a> tout mes bons plans pour les mangas, jeux etc...
+                </p>
             </div>
             <div class="folio">
                 <h3>Mon porte folio</h3>
@@ -150,13 +165,17 @@
                 </ul>
             </div>
             <div class="resaux">
-                <h3>Mes réseaux sociaux</h3> 
+                <h3>Mes réseaux sociaux</h3>
                 <ul class="aside-logo">
-                    <li class="logo-social"><a href="#"><img src="assets/images/logo_fb-removebg-preview.png" alt="facbook"></a></li>
-                    <li class="logo-social"><a href="#"><img src="assets/images/logo_insta-removebg-preview.png" alt="instagram"></a></li>
-                    <li class="logo-social"><a href="#"><img src="assets/images/logo_twitch-removebg-preview.png" alt="twitch"></a></li>
-                    <li class="logo-social"><a href="#"><img src="assets/images/logo_youtube-removebg-preview.png" alt="youtube"></a></li>
-                </ul> 
+                    <li class="logo-social"><a href="#"><img src="assets/images/logo_fb-removebg-preview.png"
+                                alt="facbook"></a></li>
+                    <li class="logo-social"><a href="#"><img src="assets/images/logo_insta-removebg-preview.png"
+                                alt="instagram"></a></li>
+                    <li class="logo-social"><a href="#"><img src="assets/images/logo_twitch-removebg-preview.png"
+                                alt="twitch"></a></li>
+                    <li class="logo-social"><a href="#"><img src="assets/images/logo_youtube-removebg-preview.png"
+                                alt="youtube"></a></li>
+                </ul>
             </div>
         </aside>
     </main>
@@ -164,12 +183,17 @@
     <footer>
         <p>Lorem, ipsum.</p>
         <ul class="footer-logo">
-            <li class="logo-social"><a href="#"><img src="assets/images/logo_fb-removebg-preview.png" alt="facbook"></a></li>
-            <li class="logo-social"><a href="#"><img src="assets/images/logo_insta-removebg-preview.png" alt="instagram"></a></li>
-            <li class="logo-social"><a href="#"><img src="assets/images/logo_twitch-removebg-preview.png" alt="twitch"></a></li>
-            <li class="logo-social"><a href="#"><img src="assets/images/logo_youtube-removebg-preview.png" alt="youtube"></a></li>
-        </ul> 
+            <li class="logo-social"><a href="#"><img src="assets/images/logo_fb-removebg-preview.png" alt="facbook"></a>
+            </li>
+            <li class="logo-social"><a href="#"><img src="assets/images/logo_insta-removebg-preview.png"
+                        alt="instagram"></a></li>
+            <li class="logo-social"><a href="#"><img src="assets/images/logo_twitch-removebg-preview.png"
+                        alt="twitch"></a></li>
+            <li class="logo-social"><a href="#"><img src="assets/images/logo_youtube-removebg-preview.png"
+                        alt="youtube"></a></li>
+        </ul>
     </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>

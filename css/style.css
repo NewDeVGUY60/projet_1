@@ -34,6 +34,7 @@ body{
     line-height: 1.2;
     background-color: aliceblue;
     margin: auto;
+    width: 100%;
 }
 
 /* header pattern */
@@ -151,9 +152,11 @@ li {
     box-shadow: 1px 7px 10px 2px rgba(0,0,0,0.3);
     transition: all 1s ease;
     display: none;
+    /* right: -150px; */
 }
 .active{
     display: block;
+    /* right: 10px; */
 }
 
 .menu-contener div{
@@ -286,7 +289,7 @@ footer li{
         max-width: 80%;
     }
     header{
-        width: 80%;
+        /* width: 90%; */
         background-color: aliceblue;
         box-shadow: none;
         border: none;
@@ -328,7 +331,7 @@ footer li{
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
-        left: 122px;
+        left: 100px;
         margin: 10px;
     }
 
@@ -338,7 +341,7 @@ footer li{
         font-size: 1.3rem;
     }
     .acceuil{
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .btn-contact,.btn-photo,.btn-video{
     display: flex;
@@ -349,6 +352,8 @@ footer li{
     padding: 5px 10px;
     border-radius: 10px;
     }
+
+
     .btn-contact img,.btn-photo img,.btn-video img{
         width: 30px;
     }
@@ -362,17 +367,40 @@ footer li{
         align-items: center;
 
     }
-
-    .contact,.video,.picture{
-        display: none;
+    
+    .contact2,.video2,.picture2{
+        display: flex;
         flex-direction: column;
-        
+        text-align: center;
+        justify-content: space-evenly;
+        text-transform: capitalize;
+        position: relative;
+        border-radius: 5px;
+        bottom:50px;
+        z-index: -1;
+        /* transition: all 1s ease-out; */
+        background-color: #f3f3e6;
+        width: 118px;
+        border-left:2px solid #030d16;
+        border-right:2px solid #030d16;
+        /* transition: all 0.2s ease-in; */
+        /* display: none; */
+        height: 0px;
+    }
+    .visible{
+        /* display: block; */
+        height: 70px;
+        z-index: 1;
+        left: 10px;
+        top: 0px;
+        transition: all 0.2s ease-in;
     }
     /* my content  */
     .presentation{
         padding: 5px;
     }
     main{
+        margin: auto;
         width: 80%;
         padding: 2rem;
         display: grid;
@@ -493,7 +521,7 @@ footer li{
        align-items: center;
     }
 
-    @media (min-width: 1100px){
+    @media (min-width: 1000px){
         header{
             width: 100%;
         }

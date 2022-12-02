@@ -99,8 +99,10 @@ darkMode.addEventListener("change", () => {
     body.classList.toggle("dark-mode");
     if (label.textContent === "🌙") {
         label.textContent = "🔅";
+        body.style.transition="all 1s ease-in-out";
     } else {
         label.textContent = "🌙";
+        body.style.transition="all 1s ease-in-out";
     }
 }
 );
@@ -110,10 +112,18 @@ styleInput.style.width = "0px";
 
 // on change les immages des cards pour rendre la page plus dynamique
 
+const onepiece={ alt:["one piece book","Luffy","Zoro"], src:["assets/images/One_Piece.jpg","assets\images\luffy.jpg","assets\images\zoro.jpg"] };
+const videoGame={ alt:["video game","fortnite","nintendo schitch"], src:["assets/images/video_game.png","assets\images\fortnite.jpg","assets\images\nintendo-switch.jpg"] };
+const science={ alt:["astronomie","physique quantique théorie multivers","station spacial"], src:["assets/images/outer-space-background.jpg","assets\images\parallel-world.jpg","assets\images\space-station.jpg"] };
+
+
 const  section = document.querySelector("section");
 const imgDynamique = section.querySelectorAll("img");
 
-console.log(imgDynamique);
+// imgDynamique[0].currentSrc = myPicture.onepiece.alt[0];
+console.log(onepiece.alt[1])
+
+// setInterval.
 
 
 

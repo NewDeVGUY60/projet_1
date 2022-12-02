@@ -31,6 +31,7 @@
 .dark-mode {
     background-color: black;
     color: aliceblue;
+    transition: all 1s ease-in-out;
 }
 
 /* body and font family */
@@ -38,7 +39,7 @@ body {
     font-family: var(--font-family);
     line-height: 1.2;
     margin: auto;
-    background-color: aliceblue;
+    background-color: rgb(240, 248, 255);
 }
 
 /* header pattern */
@@ -54,7 +55,6 @@ header {
     z-index: 1000;
     position: sticky;
     top: 0;
-    /* padding: 0; */
 }
 
 /* parameter of my logo for header  */
@@ -165,7 +165,8 @@ li {
     flex-direction: column;
     position: absolute;
     box-sizing: border-box;
-    transition: all 250ms ease-in;
+    transition: top 0.5s , left 0.5s , width 0.2s, height 0.2s, font-size 0.1s, transform 2s;
+    /* transition: all 0.5s ease-in; */
     top: -5px;
     z-index: -1;
 }
@@ -183,12 +184,14 @@ li {
     border: 2px solid var(--color-border);
     background-color: var(--menu-contener-secondary-bgc);
     z-index: 0;
+    transition: top 0.2s , left 0.2s , width 0.5s, height 0.5s, font-size 0.8s, transform 2s;
 }
 
 .menu-contener a:hover {
     color: var(--a-hover-color);
     font-size: large;
-    transition: 0.1s;
+    font-weight: 900;
+    transition: all 0.1s ease-in;
     z-index: -1;
 }
 
@@ -225,11 +228,9 @@ li {
 main {
     padding: 2rem 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: minmax(700px, 100%) 145px;
 }
 
-.section-contener:not(aside) {
+.section-contener {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -268,7 +269,7 @@ p:not(aside p) {
 }
 
 .presentation-sujet {
-    background-color: #eafaf9c5;
+    background-color: #eafaf971;
     border-radius: 5px;
 }
 
@@ -338,32 +339,29 @@ footer li {
     }
 
     header {
-        background-color: aliceblue;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(240, 248, 255, 0.45);
         box-shadow: none;
         border: none;
         justify-content: flex-start;
         padding: 3rem 0;
-        margin: 15px 0;
+        margin: 0 0 30px 0;
         position: static;
-
+        padding: 10px 0;
     }
 
     .logo {
         margin: 0;
         padding: 10px;
         height: 120px;
-        max-height: 120px;
         width: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
     }
 
     .logo img {
         align-items: center;
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 
     .logo img:hover {
@@ -386,7 +384,7 @@ footer li {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        position: relative;
+        /* position: relative; */
         left: 100px;
         margin: 10px;
     }
@@ -395,10 +393,6 @@ footer li {
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 1.3rem;
-    }
-
-    .accueil {
-        margin-top: 5px;
     }
 
     .btn-contact,
@@ -441,21 +435,19 @@ footer li {
         text-transform: capitalize;
         position: relative;
         border-radius: 5px;
-        bottom: 50px;
+        bottom: 150px;
         z-index: -1;
-        /* transition: all 1s ease-out; */
         background-color: #f3f3e6;
         width: 118px;
         border-left: 2px solid #030d16;
         border-right: 2px solid #030d16;
-        /* transition: all 0.2s ease-in; */
-        /* display: none; */
         height: 0px;
+        font-size: 0px;
     }
 
     .visible {
-        /* display: block; */
         height: 70px;
+        font-size: medium;
         z-index: 1;
         left: 10px;
         top: 0px;
@@ -464,7 +456,10 @@ footer li {
 
     /* my content  */
     .presentation {
-        padding: 5px;
+        padding: 15px;
+    }
+    .presentation p{
+        padding: 0 2rem;
     }
 
     main {
@@ -494,7 +489,7 @@ footer li {
         font-size: large;
     }
 
-    p:not(.aside-p, .acceuil) {
+    p {
         padding: 0.9rem;
     }
 
@@ -525,7 +520,7 @@ footer li {
     }
 
     h3 {
-        background-color: #f8f8e494;
+        background-color: #f8f8e47f;
         border-top: 2px solid #1a1818d7;
         /* margin-top: 20px; */
         color: #030d16;
@@ -561,7 +556,7 @@ footer li {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        background-color: aliceblue;
+        background-color: rgba(240, 248, 255, 0.5);
         box-shadow: none;
     }
 
@@ -582,15 +577,20 @@ footer li {
     @media (min-width: 1000px) {
         body {
             max-width: 1440px;
+            min-height: 100%;
         }
 
         header {
             width: 100%;
         }
 
-        /* main {
-            width: 100%;
-        } */
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+        .section-contener{
+            width: calc(100% - 150px);
+        }
         aside {
             display: flex;
             flex-direction: column;

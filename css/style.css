@@ -165,8 +165,7 @@ li {
     flex-direction: column;
     position: absolute;
     box-sizing: border-box;
-    transition: top 0.5s , left 0.5s , width 0.2s, height 0.2s, font-size 0.1s, transform 2s;
-    /* transition: all 0.5s ease-in; */
+    transition: top 0.5s, left 0.5s, width 0.2s, height 0.2s, font-size 0.1s, transform 2s;
     top: -5px;
     z-index: -1;
 }
@@ -184,7 +183,7 @@ li {
     border: 2px solid var(--color-border);
     background-color: var(--menu-contener-secondary-bgc);
     z-index: 0;
-    transition: top 0.2s , left 0.2s , width 0.5s, height 0.5s, font-size 0.8s, transform 2s;
+    transition: top 0.2s, left 0.2s, width 0.5s, height 0.5s, font-size 0.8s, transform 2s;
 }
 
 .menu-contener a:hover {
@@ -237,9 +236,21 @@ main {
     box-shadow: 0px 0px 11px 6px rgba(94, 88, 88, 0.53);
     border-radius: 5px;
 }
-
-.contener img {
+.contener-img {
+    display: flex;
+    min-width: 50%;
     max-width: 100%;
+    height: 350px;
+    transition: all 1s ease-in-out;
+    align-items: center;
+    justify-items: center;
+}
+
+.img-transition{
+    transition: all 1s ease-in-out;
+    min-width: 50%;
+    max-width: 0px;
+    height: 0px;
 }
 
 h1 {
@@ -266,6 +277,7 @@ p:not(aside p) {
     flex-direction: column;
     gap: var(--spacing);
     padding: var(--spacing);
+    background-color: #d3e3f22d;
 }
 
 .presentation-sujet {
@@ -344,11 +356,13 @@ footer li {
         background-color: rgba(240, 248, 255, 0.45);
         box-shadow: none;
         border: none;
+        border-radius: 0px;
         justify-content: flex-start;
         padding: 3rem 0;
         margin: 0 0 30px 0;
         position: static;
         padding: 10px 0;
+        height: 140px;
     }
 
     .logo {
@@ -408,10 +422,14 @@ footer li {
     }
 
 
-    .btn-contact img,
-    .btn-photo img,
-    .btn-video img {
+    .arrow-down {
         width: 30px;
+        rotate: 0deg;
+        transition: all 0.2s ease-in-out;
+    }
+    .arrow-up {
+        width: 30px;
+        rotate: 180deg;
     }
 
     .btn-p {
@@ -447,9 +465,10 @@ footer li {
 
     .visible {
         height: 70px;
+        width: 135px;
         font-size: medium;
         z-index: 1;
-        left: 10px;
+        /* left: 10px; */
         top: 0px;
         transition: all 0.2s ease-in;
     }
@@ -458,7 +477,8 @@ footer li {
     .presentation {
         padding: 15px;
     }
-    .presentation p{
+
+    .presentation p {
         padding: 0 2rem;
     }
 
@@ -473,6 +493,9 @@ footer li {
     .contener img {
         max-width: 100%;
         border-radius: none;
+    }
+    .contener-img{
+        min-height: 320px;
     }
 
     h1 {
@@ -511,8 +534,13 @@ footer li {
     }
 
     .presentation-sujet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 40%;
         margin-left: 10px;
+
     }
 
     .activity {
@@ -558,6 +586,7 @@ footer li {
         flex-direction: row;
         background-color: rgba(240, 248, 255, 0.5);
         box-shadow: none;
+        border-radius: 0px;
     }
 
     footer p {
@@ -582,15 +611,24 @@ footer li {
 
         header {
             width: 100%;
+            height: 180px;
         }
-
+        .logo{
+            padding: 2rem;
+        }
         main {
             display: flex;
             flex-direction: row;
         }
-        .section-contener{
+
+        .section-contener {
             width: calc(100% - 150px);
         }
+
+        .contener-img{
+            min-height: 550px;
+        }
+
         aside {
             display: flex;
             flex-direction: column;

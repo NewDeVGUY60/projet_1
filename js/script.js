@@ -110,6 +110,10 @@ styleInput.style.width = "0px";
 
 // on change les immages des cards pour rendre la page plus dynamique
 
+const  section = document.querySelector("section");
+const imgDynamique = section.querySelectorAll("img");
+
+console.log(imgDynamique);
 
 
 

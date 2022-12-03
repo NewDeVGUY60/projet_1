@@ -229,30 +229,6 @@ main {
     margin: 0;
 }
 
-.section-contener {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    box-shadow: 0px 0px 11px 6px rgba(94, 88, 88, 0.53);
-    border-radius: 5px;
-}
-.contener-img {
-    display: flex;
-    min-width: 50%;
-    max-width: 100%;
-    height: 350px;
-    transition: all 1s ease-in-out;
-    align-items: center;
-    justify-items: center;
-}
-
-.img-transition{
-    transition: all 1s ease-in-out;
-    min-width: 50%;
-    max-width: 0px;
-    height: 0px;
-}
-
 h1 {
     padding: 0.9rem;
     font-family: var(--font-family);
@@ -279,16 +255,33 @@ p:not(aside p) {
     padding: var(--spacing);
     background-color: #d3e3f22d;
 }
-
-.presentation-sujet {
-    background-color: #eafaf971;
+.section-contener {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    box-shadow: 0px 0px 11px 6px rgba(94, 88, 88, 0.53);
     border-radius: 5px;
 }
 
-section img {
+.contener-img {
+    display: flex;
+    min-width: 50%;
     max-width: 100%;
+    height: 350px;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.my-img {
+    transition: all 1.2s ease-in-out;
+    width: 100%;
     border-radius: 5px;
-    box-shadow: 0px 0px 11px 6px rgba(0, 0, 0, 0.2);
+}
+.presentation-sujet {
+    background-color: #eafaf971;
+    border-radius: 5px;
 }
 
 aside {
@@ -427,6 +420,7 @@ footer li {
         rotate: 0deg;
         transition: all 0.2s ease-in-out;
     }
+
     .arrow-up {
         width: 30px;
         rotate: 180deg;
@@ -494,7 +488,8 @@ footer li {
         max-width: 100%;
         border-radius: none;
     }
-    .contener-img{
+
+    .contener-img {
         min-height: 320px;
     }
 
@@ -613,9 +608,11 @@ footer li {
             width: 100%;
             height: 180px;
         }
-        .logo{
+
+        .logo {
             padding: 2rem;
         }
+
         main {
             display: flex;
             flex-direction: row;
@@ -625,8 +622,8 @@ footer li {
             width: calc(100% - 150px);
         }
 
-        .contener-img{
-            min-height: 550px;
+        .contener-img {
+            min-height: 510px;
         }
 
         aside {

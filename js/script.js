@@ -94,25 +94,17 @@ btnVideo.addEventListener('click', () => {
 
 // change le style du background-color et la couleur du text pour appliquer le mode sombre 
 
-const darkMode = document.querySelector("input[name=dark-mode]");
-const label = document.querySelector("label");
-label.textContent = "🔅";
-
 const body = document.querySelector("body");
+const darkModeLabel = document.querySelector(".sun-moon");
+const darkModeSlide = document.querySelector(".hidden");
 
-darkMode.addEventListener("change", () => {
+darkModeLabel.addEventListener("click",()=>{
+    darkModeSlide.classList.toggle("hidden-moon");
     body.classList.toggle("dark-mode");
-    if (label.textContent === "🌙") {
-        label.textContent = "🔅";
-        body.style.transition = "all 1s ease-in-out";
-    } else {
-        label.textContent = "🌙";
-        body.style.transition = "all 1s ease-in-out";
-    }
-}
-);
-const styleInput = document.querySelector("#dark-mode");
-styleInput.style.width = "0px";
+    darkModeLabel.classList.toggle("label-bgc");
+});
+
+
 
 
 // on change les immages des cards pour rendre la page plus dynamique
@@ -122,7 +114,7 @@ const onepiece = { alt: ["one piece book", "Luffy", "Zoro"], src: ["assets/image
 const videoGame = { alt: ["video game", "fortnite", "nintendo schitch"], src: ["assets/images/signal.jpg", "assets/images/fortnite.jpg", "assets/images/nintendo-switch.jpg"] };
 const science = { alt: ["astronomie", "physique quantique théorie multivers", "station spacial"], src: ["assets/images/outer-space-background.jpg", "assets/images/parallel-world.jpg", "assets/images/international-space-station.jpg"] };
 
-const myImg = [onepiece,videoGame,science]
+const myImg = [onepiece,videoGame,science];
 
 // je seletionne la div contenant mes images
 const conteneurImg = document.querySelectorAll(".contener-img");
@@ -317,4 +309,3 @@ setInterval(slideScience, 5400);
 // };
 
 // setInterval(imgScience, 5100);
-
